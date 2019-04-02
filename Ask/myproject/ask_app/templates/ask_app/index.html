@@ -1,0 +1,35 @@
+{% extends "ask_app/base.html" %}
+{% load static %}
+{% block content %}
+
+{% for question in questions %}
+    {% include 'ask_app/question_item.html' %}
+{% endfor %}
+
+  <!--Кнопки переключения страниц -->
+    <div class="container">
+      <div class="row">
+        <div class="col-ld-6">
+          <div class="row">
+        <div class="col page_number">
+          <a href="#"><h6>1</h6></a>
+        </div>
+        <div class="col page_number">
+          <a href="#"><h6>2</h6></a>
+        </div>
+        <div class="col page_number">
+            <a href="#"><h6>3</h6></a>
+        </div>
+        <div class="col page_number">
+            <a href="#"><h6>...</h6></a>
+        </div>
+        <div class="col page_number">
+            <a href="#"><h6>51</h6></a>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!--Кнопки переключения страниц -->
+{% endblock %}
+
